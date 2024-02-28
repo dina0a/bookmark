@@ -38,9 +38,9 @@ function deleteweb(x){
 
 
 function showmodel(){
-    var btn1=document.getElementById('show')
-    btn1.setAttribute('data-bs-toggle' ,'modal')
-    btn1.setAttribute('data-bs-target' ,'#exampleModal')
+    let exampleModal = document.getElementById("exampleModal")
+    let modal = new bootstrap.Modal(exampleModal)
+    modal.show()
 }
 
 function addBook(){
@@ -48,9 +48,6 @@ function addBook(){
         showmodel()
     }
     else if(websiteName.value !='' && websiteUrl.value !=''){
-        var btn1=document.getElementById('show')
-        btn1.setAttribute('data-bs-toggle' ,'')
-        btn1.setAttribute('data-bs-target' ,'')
         addwebsite() 
     }
     console.log(websiteName.value)
